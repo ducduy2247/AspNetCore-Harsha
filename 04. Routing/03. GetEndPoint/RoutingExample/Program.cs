@@ -29,10 +29,11 @@ app.Use(async (context, next) =>
 app.UseEndpoints(endpoints =>
 {
   //add your endpoints here
+  // chỉ cho phương thức GET
   endpoints.MapGet("map1", async (context) => {
     await context.Response.WriteAsync("In Map 1");
   });
-
+  // chỉ cho phương thức POST
   endpoints.MapPost("map2", async (context) => {
     await context.Response.WriteAsync("In Map 2");
   });
